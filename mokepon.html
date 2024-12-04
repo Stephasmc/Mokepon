@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+</head>
+<body>
+    <h1>Clow Legends ☀️: Clash of Cards! 🌑</h1>  
+
+    <section id="chose-clow-card">
+        <h2>Chose your Clow card</h2>
+
+        <label for="firey">The Firey 火</label>
+        <input type="radio" name="mascota" id="firey"/>
+        
+        <label for="earthy">The Earthy 地</label>
+        <input type="radio" name="mascota" id="earthy"/>
+
+        <label for="watery">The Watery 水</label>
+        <input type="radio" name="mascota" id="watery"/>
+
+        <button id="button-card">Select</button>
+    </section>
+
+    <section id="chose-atack">
+        <h2>Chose your atack</h2>
+
+        <p>Your card <span id="card-player"></span> has <span id="life-player">3</span> lives</p>
+        <p>The Enemy's card <span id="card-enemy"></span> has <span id="life-enemy">3</span> lives</p>
+        <p>
+            <button id="button-fire">Fire 🔥</button>
+            <button itemref="button-water">Water 💧</button>
+            <button id="button-eart">Eart 🌱</button>
+        </p>
+    </section>
+
+    <section id="game-messages">
+        <p>
+            Your card atack with FIRE <br>
+            The enemy's card atack with EART <br>
+            YOU WIN! 
+        </p>
+    </section>
+
+    <section id="reset-game">
+        <button id="button-reset">Reset</button>
+    </section>
+
+    <!-- Scripts -->
+    <script src="./js/mokepon.js"></script>
+</body>
+</html>
