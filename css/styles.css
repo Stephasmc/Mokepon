@@ -1,0 +1,367 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Coming+Soon&display=swap');
+
+@font-face {
+    font-family: 'Pixel';
+    src: url(/fonts/LLPIXEL3.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'PixelOperator';
+    src: url(/fonts/PixelOperator.ttf) format('truetype');
+}
+/* -------------------------------------------------------------------------- */
+/* theme variables */
+:root {
+    /*Font Colors */
+    --primary: #d1e46a;
+    --secondary: #eafabd;
+    --outlined: #e67ea6;
+    --text: #333333;
+
+    /*Fonts Sizes*/
+    --sm: 20px;
+    --md: 24px;
+    --lg: 28px;
+    --xl: 38px;
+    --xxl: 72px;
+}
+/* -------------------------------------------------------------------------- */
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    font-family: "PixelOperator", sans-serif;
+    font-weight: 700;
+    color: var(--text);
+    /* wallpaper */
+    background-image: url("/assest/game-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/*HEADER*/
+header{
+    padding-top: 30px;
+}
+h1 {
+    text-align: center;
+    font-family: 'Pixel', serif;
+    letter-spacing: 0.10em;
+    margin: 0;
+}
+.title {
+    font-size: var(--xxl);
+    color: var(--primary);
+    text-shadow: 3px 3px 4px rgba(231, 78, 149, 0.801);
+}
+h3 {
+    font-size: var(--xl);
+    margin-bottom: 30px;
+}
+
+#header,
+#chose-clow-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rules-container {
+    width: 800px;
+}
+.rules-container h4 {
+    align-content: center;
+}
+/* -------------------------------------------------------------------------- */
+/*TARJETAS DE SELECCION*/
+.clow-legend-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.clow-legend-card {
+    background:rgba(138, 118, 228, 0.5);
+    background: rgba(216, 162, 118, 0.5);
+    background:rgba(228, 252, 96, 0.3);
+}
+/* .clow-legend-card.second {
+    background: rgba(216, 162, 118, 0.5);
+}
+.clow-legend-card.third {
+    background:rgba(228, 252, 96, 0.5);
+} */
+.cards {
+    display: flex;
+    gap: 48px;
+}
+.clow-legend-card p{
+    font-size: var(--sm);
+    letter-spacing: 0.25em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.clow-legend-card img { 
+    width: 160px;
+}
+input {
+    display: none;
+}
+#teddy:checked + label,
+#fluffy:checked + label,
+#buckbeak:checked + label {    
+    background: linear-gradient(to right,
+        rgba(255, 77, 196, 0.5),  
+        rgba(105, 51, 252, 0.5), 
+        rgba(51, 219, 241, 0.5), 
+        rgba(207, 250, 50, 0.5),
+        rgba(50, 250, 83, 0.5)   
+    );
+    backdrop-filter: blur(10px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+/*Shimer BUTTON*/
+#button-card {
+    width: 180px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    /* inner colors */
+    background: linear-gradient(to right,
+        rgba(255, 206, 77, 0.5),  
+        rgba(158, 117, 255, 0.5), 
+        rgba(77, 148, 255, 0.5), 
+        rgba(193, 255, 77, 0.5)   
+    );
+    color: var(--text);
+    font-size: var(--md);
+    font-family: "PixelOperator", sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding: 5px 0px;
+    margin-top: 30px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+/*Crear difuminado transparente*/
+#button-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+}
+/*Crear cambio en el boton*/
+#button-card:hover {
+    background: transparent;
+    backdrop-filter: blur(3px);
+    border-radius: 0;
+    border-image: linear-gradient(to right,
+    rgba(255, 206, 77, 0.8),
+    rgba(158, 117, 255, 0.8),
+    rgba(77, 148, 255, 0.8),
+    rgba(193, 255, 77, 0.8)
+    );
+    border-image-slice: 1; /* Hace visible el borde degradado */
+    color: var(--secondary);
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8); /* Sombra detrás del texto */
+}
+/* -------------------------------------------------------------------------- */
+/*  ATACK SECTION */
+/* player and enemy image */
+#battle-images {
+    display: flex;
+    margin-top: 40px;
+    text-align: center;
+}
+#battle-images h4 {
+    font-size: var(--md);
+    font-weight: bold;
+    margin: 0 20px;
+}
+#battle-images>p{
+    align-content: center;   
+    font-size: var(--lg);
+    color: var(--outlined);
+    text-shadow: 2px 2px 8px rgba(233, 223, 112, 0.884);
+}
+.card-image-contaier {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 245px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+}
+.card-image-contaier img{
+    width: 160px;
+    margin: 0;
+}
+.card-image-contaier p{
+    font-size: var(--sm);
+    letter-spacing: 0.25em;
+    margin: 10px 0;
+} 
+.player {
+    margin-right: 36px;
+}
+.enemy {
+    margin-left: 36px;
+}
+/* -------------------------------------------------------------------------- */
+/* atack buttons */
+#chose-atack {
+    flex-direction: column;
+    align-items: center;
+}
+.atack-section {
+    display: grid;
+    grid-template-columns: 1fr 240px 1fr;
+    gap: 30px;
+    justify-content: center;
+    align-content: center;
+    width: 900px;
+}
+#atack-button-container{ 
+    display: flex;
+    flex-direction: column;
+}
+.atack-button {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 3px 0;
+    font-family: "PixelOperator", sans-serif;
+    font-size: var(--md);
+    color: var(--text);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#claws-button {
+    border: 2px solid rgb(148, 142, 229);
+    background: rgba(178, 167, 224, 0.5);
+}
+#lash-button {
+    border: 2px solid rgba(223, 186, 156, 255);
+    background: rgba(223, 186, 156, 0.5);
+}
+#clash-button {
+    border: 2px solid rgba(229, 252, 96, 229);
+    background:rgba(180, 209, 133, 0.5);
+}
+ #claws-button:hover {
+    background: rgba(138, 118, 228, 0.5);
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.5);
+}
+#lash-button:hover {
+    background: rgba(212, 146, 91, 0.5);
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.5);
+}
+#clash-button:hover {
+    background:rgba(167, 218, 85, 0.712);
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.5);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Life Gid Panel */
+#atack-dialog-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    text-align: center;
+    border: 2px solid var(--outlined);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;    
+}
+
+#card-player, #life-player,
+#card-enemy, #life-enemy {
+    font-size: var(--sm);
+    font-weight: 700;
+    margin: 16px 0;
+    text-shadow: 0px 0px 7px var(--outlined);
+}
+/* -------------------------------------------------------------------------- */
+/* Final Result Panel */
+#final-result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#final-result-container > P {
+    height: 90px;
+    width: 250px;
+    text-align: center;
+    align-content: center;
+    background-color: #f1abdc81;
+    font-size: var(--md);
+    border-radius: 20px;
+    padding: 15px;
+    margin: 0;
+}
+#button-reset {
+    width: 110px;
+    height: 110px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    /* inner colors */
+    background: linear-gradient(to right,
+        rgba(255, 206, 77, 0.5),  
+        rgba(158, 117, 255, 0.5), 
+        rgba(77, 148, 255, 0.5), 
+        rgba(193, 255, 77, 0.5)   
+    );
+    overflow: hidden;
+    color: var(--text);
+    font-size: var(--lg);
+    font-family: "PixelOperator", sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    margin-top: 40px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 3px 3px 8px #000000;
+}
+/*Crear difuminado transparente*/
+#button-reset::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+}
+/*Crear cambio en el boton*/
+#button-reset:hover {
+    border-radius: 50%;
+    backdrop-filter: blur(3px);
+    background: linear-gradient(to right,
+        rgba(255, 206, 77, 0.5),  
+        rgba(158, 117, 255, 0.5), 
+        rgba(77, 148, 255, 0.5), 
+        rgba(193, 255, 77, 0.5)   
+    );
+    color: var(--secondary);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Sombra detrás del texto */
+}
+/* -------------------------------------------------------------------------- */
+/* RESPONSIVE DESIGN */
+/* @media () {
+
+} */

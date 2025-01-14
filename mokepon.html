@@ -1,51 +1,112 @@
-<!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    
+    <title>Clow Legends</title>
+    <link rel="icon" href="./assest/sakura.png" type="image/x-icon"/>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <h1>Clow Legends ☀️: Clash of Cards! 🌑</h1>  
+    <header id="header">
+        <h1 class="title">Clash of Beast </h1>
+    </header>
 
+     <section id="rules">
+        <div class="rules-container">
+            <!-- <h4>¡Welcome to Clash of Beast! </h4>
+            <p>En este mundo lleno de magia, podrás enfrentarte a otros jugadores en una divertida y estratégica batalla de habilidades. 
+                Pero antes de comenzar, deberás elegir a tu fantástico compañero:</p>
+                <ul>
+                    <li>🐾 Teddy, el escarbato curioso y astuto.</li>
+                    <li>🦅 Buckbeak, el noble hipogrifo con un espíritu valiente.</li>
+                    <li>🔥 Fluffy, el temible pero adorable cerbero de tres cabezas.</li>
+                </ul>
+            <p>Cada mascota tiene su propio estilo de combate, ¡pero la decisión final será tuya! 
+                Prepárate para usar todos los ataques que estos animales fantasticos tienen:</p>
+                <ul>
+                    <li>🪨 Garras de Acero: Un zarpazo rápido y feroz.</li>
+                    <li>🔥 Azote Infernal: Un remolino de latigazos.</li>
+                    <li>💫 Choque Sísmico: Una sacudida que te estremece.</li>
+                </ul>
+            <p>¿Tienes lo necesario para ganar estas batallas y convertirte en el maestro de las criaturas mágicas?<br><br>
+                💖 ¡Elige tu mascota y deja que comience la magia! 💖
+            </p> -->
+        </div>
+    </section>
+    
     <section id="chose-clow-card">
-        <h2>Chose your Clow card</h2>
+        <h3 class="section-title">Choose your Fantastic Beast</h3>
 
-        <label for="firey">The Firey 火</label>
-        <input type="radio" name="mascota" id="firey"/>
-        
-        <label for="earthy">The Earthy 地</label>
-        <input type="radio" name="mascota" id="earthy"/>
+        <div id="cards-container" class="cards">
+            <!-- <input type="radio" name="mascota" id="teddy"/>
+            <label id="teddy-card" class="clow-legend-card first" for="teddy">
+                <p>Teddy</p>
+                <img src="./assest/Teddy.png" alt="">
+            </label>
+            
+            <input type="radio" name="mascota" id="fluffy"/>
+            <label id="fluffy-card" class="clow-legend-card second" for="fluffy">
+                <p>Fluffy</p>
+                <img src="./assest/Fluffy.png" alt="">
+            </label>
 
-        <label for="watery">The Watery 水</label>
-        <input type="radio" name="mascota" id="watery"/>
+            <input type="radio" name="mascota" id="buckbeak"/>
+            <label id="buckbeak-card" class="clow-legend-card third" for="buckbeak">
+                <p>Buckbeak</p>
+                <img src="./assest/Buckbeak.png" alt="">
+            </label> -->
+        </div>
 
         <button id="button-card">Select</button>
     </section>
 
     <section id="chose-atack">
-        <h2>Chose your atack</h2>
+        <!-- Contenedor para mostrar imágenes de las cartas seleccionadas -->
+        <div id="battle-images">
+            <h4>Your Beast</h4>
+            <div class="card-image-contaier player">
+                <p id="player-card-name"></p>
+                <div id="player-card-image" class="card-image"></div>
+            </div>
+            <p>VS</p>
+            <div class="card-image-contaier enemy">
+                <p id="enemy-card-name"></p>
+                <div id="enemy-card-image" class="card-image"></div>
+            </div>
+            <h4>Your Oponent</h4>
+        </div>
 
-        <p>Your card <span id="card-player"></span> has <span id="life-player">3</span> lives</p>
-        <p>The Enemy's card <span id="card-enemy"></span> has <span id="life-enemy">3</span> lives</p>
-        <p>
-            <button id="button-fire">Fire 🔥</button>
-            <button itemref="button-water">Water 💧</button>
-            <button id="button-eart">Eart 🌱</button>
-        </p>
-    </section>
+        <h3>Chose your atack</h3>
+        <div class="atack-section">
+            <div id="atack-button-container">
+                <button id="claws-button" class="atack-button">🪨 Garras de Acero</button>
+                <button id="lash-button" class="atack-button">🔥 Azote Infernal</button>
+                <button id="clash-button" class="atack-button">💫 Choque Sísmico</button>
+            </div> 
 
-    <section id="game-messages">
-        <p>
-            Your card atack with FIRE <br>
-            The enemy's card atack with EART <br>
-            YOU WIN! 
-        </p>
-    </section>
+            <div id="atack-dialog-container">
+                <div>
+                    <p id="card-player">X</p>
+                    <p id="life-player">3</p>
+                    <div id="player-atack"></div>
+                </div>
+                <div>
+                    <p id="card-enemy"></p>
+                    <p id="life-enemy">3</p>
+                    <div id="enemy-atack"></div>
 
-    <section id="reset-game">
-        <button id="button-reset">Reset</button>
+                </div>
+            </div>
+            
+            <div id="final-result-container">
+                <p id="result">Good Luck</p>
+                <section id="reset-game">
+                    <button id="button-reset">Reset</button>
+                </section>
+            </div>
+        </div>
     </section>
 
     <!-- Scripts -->
