@@ -1,51 +1,77 @@
-<!DOCTYPE html>
+     <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    
+    <title>Clash of Legends</title>
+    <link rel="icon" href="./assets/sakura.png" type="image/x-icon"/>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css ">
 </head>
 <body>
-    <h1>Clow Legends ☀️: Clash of Cards! 🌑</h1>  
+    <header id="header">
+        <h1 class="title">Clash of Beast</h1>
+    </header>
 
-    <section id="chose-clow-card">
-        <h2>Chose your Clow card</h2>
+    <section id="rules">
+        <div class="rules-container">
+        </div>
+    </section>
+    
+    <section id="chose-fantastic-card">
+        <h3 class="section-title">Choose your Fantastic Beast</h3>
 
-        <label for="firey">The Firey 火</label>
-        <input type="radio" name="mascota" id="firey"/>
-        
-        <label for="earthy">The Earthy 地</label>
-        <input type="radio" name="mascota" id="earthy"/>
-
-        <label for="watery">The Watery 水</label>
-        <input type="radio" name="mascota" id="watery"/>
+        <div id="cards-container" class="cards">
+            <!-- it fill with JS -->
+        </div>
 
         <button id="button-card">Select</button>
     </section>
 
     <section id="chose-atack">
-        <h2>Chose your atack</h2>
+        <!-- Container to show the selected battle images -->
+        <div id="battle-images">
+            <h4>Your Beast</h4>
+            <div class="card-image-contaier player">
+                <p id="player-card-name"></p>
+                <div id="player-card-image" class="card-image"></div>
+            </div>
+            <p>VS</p>
+            <div class="card-image-contaier enemy">
+                <p id="enemy-card-name"></p>
+                <div id="enemy-card-image" class="card-image"></div>
+            </div>
+            <h4>Your Oponent</h4>
+        </div>
 
-        <p>Your card <span id="card-player"></span> has <span id="life-player">3</span> lives</p>
-        <p>The Enemy's card <span id="card-enemy"></span> has <span id="life-enemy">3</span> lives</p>
-        <p>
-            <button id="button-fire">Fire 🔥</button>
-            <button itemref="button-water">Water 💧</button>
-            <button id="button-eart">Eart 🌱</button>
-        </p>
-    </section>
+        <h3>Chose your atack</h3>
+        <div class="atack-section">
+            <div id="atack-button-container">
+                <!-- it fill with JS -->
+            </div> 
 
-    <section id="game-messages">
-        <p>
-            Your card atack with FIRE <br>
-            The enemy's card atack with EART <br>
-            YOU WIN! 
-        </p>
-    </section>
+            <div id="atack-dialog-container">
+            <!-- it fill with JS -->
+                <div>
+                    <p id="card-player">X</p>
+                    <p id="life-player">0</p>
+                    <div id="player-atack"></div>
+                </div>
+                <div>
+                    <p id="card-enemy">Y</p>
+                    <p id="life-enemy">0</p>
+                    <div id="enemy-atack"></div>
 
-    <section id="reset-game">
-        <button id="button-reset">Reset</button>
+                </div>
+            </div>
+            
+            <div id="final-result-container">
+                <p id="result">Good Luck</p>
+                <section id="reset-game">
+                    <button id="button-reset">Reset</button>
+                </section>
+            </div>
+        </div>
     </section>
 
     <!-- Scripts -->
